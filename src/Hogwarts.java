@@ -1,11 +1,11 @@
-public class Student {
+public class Hogwarts {
 
     private String name;
     private String surname;
     private int value;
     private int transgress;
 
-    public Student (String name, String surname, int value, int transgress) {
+    public Hogwarts (String name, String surname, int value, int transgress) {
         this.name = name;
         this.surname = surname;
         this.value = value;

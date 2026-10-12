@@ -1,4 +1,4 @@
-public class Ravenclaw extends Student {
+public class Ravenclaw extends Hogwarts {
 
     private int mind;
     private int wisdom;
