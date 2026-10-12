@@ -34,4 +34,21 @@ public class Hufflepuff extends Hogwarts{
     public void setHonesty (int honesty) {
         this.honesty = honesty;
     }
+
+    @Override
+    public String toString () {
+        return super.toString() + "\nТрудолюбие: " + this.getDiligence() + "\nВерность: " + this.getLoyalty() + "\nЧестность: " + this.getHonesty();
+    }
+
+    public void equals (Hufflepuff student) {
+        int onePower = this.getValue() + this.getTransgress() + this.getDiligence() + this.getLoyalty() + this.getHonesty();
+        int twoPower = student.getValue() + student.getTransgress() + student.getDiligence() + student.getLoyalty() + student.getHonesty();
+        if (onePower > twoPower) {
+            System.out.println(this.getName() + " " + this.getSurname() + " лучший студент Пуффендуя, чем " + student.getName() + " " + student.getSurname());
+        } else if (twoPower > onePower) {
+            System.out.println(student.getName() + " " + student.getSurname() + " лучший студент Пуффендуя, чем " + this.getName() + " " + this.getSurname());
+        } else {
+            System.out.println(student.getName() + " " + student.getSurname() + " и " + this.getName() + " " + this.getSurname() + " равны");
+        }
+    }
 }

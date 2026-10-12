@@ -44,4 +44,21 @@ public class Ravenclaw extends Hogwarts {
     public void setCreation (int creation) {
         this.creation = creation;
     }
+
+    @Override
+    public String toString () {
+        return super.toString() + "\nУм: " + this.getMind() + "\nМудрость: " + this.getWisdom() + "\nОстроумие: " + this.getWit() + "\nТворчество: " + this.getCreation();
+    }
+
+    public void equals (Ravenclaw student) {
+        int onePower = this.getValue() + this.getTransgress() + this.getMind() + this.getWisdom() + this.getWit() + this.getCreation();
+        int twoPower = student.getValue() + student.getTransgress() + student.getMind() + student.getWisdom() + student.getWit() + this.getCreation();
+        if (onePower > twoPower) {
+            System.out.println(this.getName() + " " + this.getSurname() + " лучший Когтевранец, чем " + student.getName() + " " + student.getSurname());
+        } else if (twoPower > onePower) {
+            System.out.println(student.getName() + " " + student.getSurname() + " лучший Когтевранец, чем " + this.getName() + " " + this.getSurname());
+        } else {
+            System.out.println(student.getName() + " " + student.getSurname() + " и " + this.getName() + " " + this.getSurname() + " равны");
+        }
+    }
 }

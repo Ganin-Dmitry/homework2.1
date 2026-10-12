@@ -44,5 +44,20 @@ public class Hogwarts {
         this.transgress = transgress;
     }
 
+    @Override
+    public String toString () {
+        return "Имя: " + this.getName() + " " + this.getSurname() + "\nСила магии: " + this.getValue() + "\nРастояние трансгрессии: " + this.getTransgress();
+    }
 
+    public void equals (Hogwarts student) {
+        int onePower = this.getValue() + this.getTransgress();
+        int twoPower = student.getValue() + student.getTransgress();
+        if (onePower > twoPower) {
+            System.out.println(this.getName() + " " + this.getSurname() + " обладает большей мощностью магии, чем " + student.getName() + " " + student.getSurname());
+        } else if (twoPower > onePower) {
+            System.out.println(student.getName() + " " + student.getSurname() + " обладает большей мощностью магии, чем " + this.getName() + " " + this.getSurname());
+        } else {
+            System.out.println(student.getName() + " " + student.getSurname() + " и " + this.getName() + " " + this.getSurname() + " равны по силе");
+        }
+    }
 }

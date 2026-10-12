@@ -35,4 +35,21 @@ public class Gryffindor extends Hogwarts {
     public void setBravery(int bravery) {
         this.bravery = bravery;
     }
+
+    @Override
+    public String toString () {
+        return super.toString() + "\nБлагородство: " + this.getNobility() + "\nЧесть: " + this.getHonor() + "\nХрабрость: " +this.getBravery();
+    }
+
+    public void equals (Gryffindor student) {
+        int onePower = this.getValue() + this.getTransgress() + this.getNobility() + this.getHonor() + this.getBravery();
+        int twoPower = student.getValue() + student.getTransgress() + student.getNobility() + student.getHonor() + student.getBravery();
+        if (onePower > twoPower) {
+            System.out.println(this.getName() + " " + this.getSurname() + " лучший Гриффиндоровец, чем " + student.getName() + " " + student.getSurname());
+        } else if (twoPower > onePower) {
+            System.out.println(student.getName() + " " + student.getSurname() + " лучший Гриффиндоровец, чем " + this.getName() + " " + this.getSurname());
+        } else {
+            System.out.println(student.getName() + " " + student.getSurname() + " и " + this.getName() + " " + this.getSurname() + " равны");
+        }
+    }
 }
