@@ -6,10 +6,27 @@ public class GryffindorStudents extends HogwartsStudents {
 
     public GryffindorStudents (String name, String surname, int value, int transgress, int nobility, int honor, int bravery) {
         super(name, surname, value, transgress);
-        this.setNobility(nobility);
-        this.setHonor(honor);
-        this.setBravery(bravery);
-
+        if (nobility > 100) {
+            this.setNobility(100);
+        } else if (nobility < 0) {
+            this.setNobility(0);
+        } else {
+            this.setNobility(nobility);
+        }
+        if (honor > 100) {
+            this.setHonor(100);
+        } else if (honor < 0) {
+            this.setHonor(0);
+        } else {
+            this.setHonor(honor);
+        }
+        if (bravery > 100) {
+            this.setBravery(100);
+        } else if (bravery < 0) {
+            this.setBravery(0);
+        } else {
+            this.setBravery(bravery);
+        }
     }
 
     public int getNobility() {
@@ -25,15 +42,33 @@ public class GryffindorStudents extends HogwartsStudents {
     }
 
     public void setNobility(int nobility) {
-        this.nobility = nobility;
+        if (nobility > 100) {
+            this.nobility = 100;
+        } else if (nobility < 0) {
+            this.nobility = 0;
+        } else {
+            this.nobility = nobility;
+        }
     }
 
     public void setHonor(int honor) {
-        this.honor = honor;
+        if (honor > 100) {
+            this.honor = 100;
+        } else if (honor < 0) {
+            this.honor = 0;
+        } else {
+            this.honor = honor;
+        }
     }
 
     public void setBravery(int bravery) {
-        this.bravery = bravery;
+        if (bravery > 100) {
+            this.bravery = 100;
+        } else if (bravery < 0) {
+            this.bravery = 0;
+        } else {
+            this.bravery = bravery;
+        }
     }
 
     @Override

@@ -6,9 +6,27 @@ public class HufflepuffStudents extends HogwartsStudents {
 
     public HufflepuffStudents (String name, String surname, int value, int transgress, int diligence, int loyalty, int honesty) {
         super(name, surname, value, transgress);
-        this.setDiligence(diligence);
-        this.setLoyalty(loyalty);
-        this.setHonesty(honesty);
+        if (diligence > 100) {
+            this.setDiligence(100);
+        } else if (diligence < 0) {
+            this.setDiligence(0);
+        } else {
+            this.setDiligence(diligence);
+        }
+        if (loyalty > 100) {
+            this.setLoyalty(100);
+        } else if (loyalty < 0) {
+            this.setLoyalty(0);
+        } else {
+            this.setLoyalty(loyalty);
+        }
+        if (honesty > 100) {
+            this.setHonesty(100);
+        } else if (honesty < 0) {
+            this.setHonesty(0);
+        } else {
+            this.setHonesty(honesty);
+        }
     }
 
     public int getDiligence () {
@@ -24,15 +42,33 @@ public class HufflepuffStudents extends HogwartsStudents {
     }
 
     public void setDiligence (int diligence) {
-        this.diligence = diligence;
+        if (diligence > 100) {
+            this.diligence = 100;
+        } else if (diligence < 0) {
+            this.diligence = 0;
+        } else {
+            this.diligence = diligence;
+        }
     }
 
     public void setLoyalty (int loyalty) {
-        this.loyalty = loyalty;
+        if (loyalty > 100) {
+            this.loyalty = 100;
+        } else if (loyalty < 0) {
+            this.loyalty = 0;
+        } else {
+            this.loyalty = loyalty;
+        }
     }
 
     public void setHonesty (int honesty) {
-        this.honesty = honesty;
+        if (honesty > 100) {
+            this.honesty = 100;
+        } else if (honesty < 0) {
+            this.honesty = 0;
+        } else {
+            this.honesty = honesty;
+        }
     }
 
     @Override

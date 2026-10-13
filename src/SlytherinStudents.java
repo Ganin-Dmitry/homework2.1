@@ -8,11 +8,41 @@ public class SlytherinStudents extends HogwartsStudents {
 
     public SlytherinStudents (String name, String surname, int value, int transgress, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
         super(name, surname, value, transgress);
-        this.setCunning(cunning);
-        this.setDetermination(determination);
-        this.setAmbition(ambition);
-        this.setResourcefulness(resourcefulness);
-        this.setLustForPower(lustForPower);
+        if (cunning > 100) {
+            this.setCunning(100);
+        } else if (cunning < 0) {
+            this.setCunning(0);
+        } else {
+            this.setCunning(cunning);
+        }
+        if (determination > 100) {
+            this.setDetermination(100);
+        } else if (determination < 0) {
+            this.setDetermination(0);
+        } else {
+            this.setDetermination(determination);
+        }
+        if (ambition > 100) {
+            this.setAmbition(100);
+        } else if (ambition < 0) {
+            this.setAmbition(0);
+        } else {
+            this.setAmbition(ambition);
+        }
+        if (resourcefulness > 100) {
+            this.setResourcefulness(100);
+        } else if (resourcefulness < 0) {
+            this.setResourcefulness(0);
+        } else {
+            this.setResourcefulness(resourcefulness);
+        }
+        if (lustForPower > 100) {
+            this.setLustForPower(100);
+        } else if (lustForPower < 0) {
+            this.setLustForPower(0);
+        } else {
+            this.setLustForPower(lustForPower);
+        }
     }
 
     public int getCunning() {
@@ -36,23 +66,53 @@ public class SlytherinStudents extends HogwartsStudents {
     }
 
     public void setCunning(int cunning) {
-        this.cunning = cunning;
+        if (cunning > 100) {
+            this.cunning = 100;
+        } else if (cunning < 0) {
+            this.cunning = 0;
+        } else {
+            this.cunning = cunning;
+        }
     }
 
     public void setDetermination(int determination) {
-        this.determination = determination;
+        if (determination > 100) {
+            this.determination = 100;
+        } else if (determination < 0) {
+            this.determination = 0;
+        } else {
+            this.determination = determination;
+        }
     }
 
     public void setAmbition(int ambition) {
-        this.ambition = ambition;
+        if (ambition > 100) {
+            this.ambition = 100;
+        } else if (ambition < 0) {
+            this.ambition = 0;
+        } else {
+            this.ambition = ambition;
+        }
     }
 
     public void setResourcefulness(int resourcefulness) {
-        this.resourcefulness = resourcefulness;
+        if (resourcefulness > 100) {
+            this.resourcefulness = 100;
+        } else if (resourcefulness < 0) {
+            this.resourcefulness = 0;
+        } else {
+            this.resourcefulness = resourcefulness;
+        }
     }
 
     public void setLustForPower(int lustForPower) {
-        this.lustForPower = lustForPower;
+        if (lustForPower > 100) {
+            this.lustForPower = 100;
+        } else if (lustForPower < 0) {
+            this.lustForPower = 0;
+        } else {
+            this.lustForPower = lustForPower;
+        }
     }
 
     @Override

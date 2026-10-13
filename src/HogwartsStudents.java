@@ -2,14 +2,26 @@ public abstract class HogwartsStudents {
 
     private String name;
     private String surname;
-    private int value;
+    private int mind;
     private int transgress;
 
-    public HogwartsStudents (String name, String surname, int value, int transgress) {
+    public HogwartsStudents (String name, String surname, int mind, int transgress) {
         this.setName(name);
         this.setSurname(surname);
-        this.setValue(value);
-        this.setTransgress(transgress);
+        if (mind > 100) {
+            this.setValue(100);
+        } else if (mind < 0) {
+            this.setValue(0);
+        } else {
+            this.setValue(mind);
+        }
+        if (transgress > 100) {
+            this.setTransgress(100);
+        } else if (transgress < 0) {
+            this.setTransgress(0);
+        } else {
+            this.setTransgress(transgress);
+        }
     }
 
     public String getName () {
@@ -21,7 +33,7 @@ public abstract class HogwartsStudents {
     }
 
     public int getValue () {
-        return this.value;
+        return this.mind;
     }
 
     public int getTransgress () {
@@ -36,12 +48,24 @@ public abstract class HogwartsStudents {
         this.surname = surname;
     }
 
-    public void setValue (int value) {
-        this.value = value;
+    public void setValue (int mind) {
+        if (mind > 100) {
+            this.mind = 100;
+        } else if (mind < 0) {
+            this.mind = 0;
+        } else {
+            this.mind = mind;
+        }
     }
 
     public void setTransgress (int transgress) {
-        this.transgress = transgress;
+        if (transgress > 100) {
+            this.transgress = 100;
+        } else if (transgress < 0) {
+            this.transgress = 0;
+        } else {
+            this.transgress = transgress;
+        }
     }
 
     @Override
