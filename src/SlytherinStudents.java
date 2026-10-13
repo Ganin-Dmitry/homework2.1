@@ -1,4 +1,4 @@
-public class Slytherin extends Hogwarts {
+public class SlytherinStudents extends HogwartsStudents {
 
     private int cunning;
     private int determination;
@@ -6,13 +6,13 @@ public class Slytherin extends Hogwarts {
     private int resourcefulness;
     private int lustForPower;
 
-    public Slytherin(String name, String surname, int value, int transgress, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
+    public SlytherinStudents (String name, String surname, int value, int transgress, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
         super(name, surname, value, transgress);
-        this.cunning = cunning;
-        this.determination = determination;
-        this.ambition = ambition;
-        this.resourcefulness = resourcefulness;
-        this.lustForPower = lustForPower;
+        this.setCunning(cunning);
+        this.setDetermination(determination);
+        this.setAmbition(ambition);
+        this.setResourcefulness(resourcefulness);
+        this.setLustForPower(lustForPower);
     }
 
     public int getCunning() {
@@ -60,9 +60,9 @@ public class Slytherin extends Hogwarts {
         return super.toString() + "\nХитрость: " + this.getCunning() + "\nРешительность: " + this.getDetermination() + "\nАмбициозность: " + this.getAmbition() + "\nНаходчивость: " + this.getResourcefulness() + "\nЖажда власти: " + this.getLustForPower();
     }
 
-    public void equals(Slytherin student) {
-        int onePower = this.getValue() + this.getTransgress() + this.getCunning() + this.getDetermination() + this.getAmbition() + this.getResourcefulness() + this.getLustForPower();
-        int twoPower = student.getValue() + student.getTransgress() + student.getCunning() + student.getDetermination() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower();
+    public void equals(SlytherinStudents student) {
+        int onePower = this.getCunning() + this.getDetermination() + this.getAmbition() + this.getResourcefulness() + this.getLustForPower();
+        int twoPower = student.getCunning() + student.getDetermination() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower();
         if (onePower > twoPower) {
             System.out.println(this.getName() + " " + this.getSurname() + " лучший ученик Слизерина, чем " + student.getName() + " " + student.getSurname());
         } else if (twoPower > onePower) {

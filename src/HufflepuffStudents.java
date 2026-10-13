@@ -1,14 +1,14 @@
-public class Hufflepuff extends Hogwarts{
+public class HufflepuffStudents extends HogwartsStudents {
 
     private int diligence;
     private int loyalty;
     private int honesty;
 
-    public Hufflepuff (String name, String surname, int value, int transgress, int diligence, int loyalty, int honesty) {
+    public HufflepuffStudents (String name, String surname, int value, int transgress, int diligence, int loyalty, int honesty) {
         super(name, surname, value, transgress);
-        this.diligence = diligence;
-        this.loyalty = loyalty;
-        this.honesty = honesty;
+        this.setDiligence(diligence);
+        this.setLoyalty(loyalty);
+        this.setHonesty(honesty);
     }
 
     public int getDiligence () {
@@ -40,9 +40,9 @@ public class Hufflepuff extends Hogwarts{
         return super.toString() + "\nТрудолюбие: " + this.getDiligence() + "\nВерность: " + this.getLoyalty() + "\nЧестность: " + this.getHonesty();
     }
 
-    public void equals (Hufflepuff student) {
-        int onePower = this.getValue() + this.getTransgress() + this.getDiligence() + this.getLoyalty() + this.getHonesty();
-        int twoPower = student.getValue() + student.getTransgress() + student.getDiligence() + student.getLoyalty() + student.getHonesty();
+    public void equals (HufflepuffStudents student) {
+        int onePower = this.getDiligence() + this.getLoyalty() + this.getHonesty();
+        int twoPower = student.getDiligence() + student.getLoyalty() + student.getHonesty();
         if (onePower > twoPower) {
             System.out.println(this.getName() + " " + this.getSurname() + " лучший студент Пуффендуя, чем " + student.getName() + " " + student.getSurname());
         } else if (twoPower > onePower) {

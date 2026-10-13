@@ -1,14 +1,14 @@
-public class Gryffindor extends Hogwarts {
+public class GryffindorStudents extends HogwartsStudents {
 
     private int nobility;
     private int honor;
     private int bravery;
 
-    public Gryffindor (String name, String surname, int value, int transgress, int nobility, int honor, int bravery) {
+    public GryffindorStudents (String name, String surname, int value, int transgress, int nobility, int honor, int bravery) {
         super(name, surname, value, transgress);
-        this.nobility = nobility;
-        this.honor = honor;
-        this.bravery = bravery;
+        this.setNobility(nobility);
+        this.setHonor(honor);
+        this.setBravery(bravery);
 
     }
 
@@ -41,9 +41,9 @@ public class Gryffindor extends Hogwarts {
         return super.toString() + "\nБлагородство: " + this.getNobility() + "\nЧесть: " + this.getHonor() + "\nХрабрость: " +this.getBravery();
     }
 
-    public void equals (Gryffindor student) {
-        int onePower = this.getValue() + this.getTransgress() + this.getNobility() + this.getHonor() + this.getBravery();
-        int twoPower = student.getValue() + student.getTransgress() + student.getNobility() + student.getHonor() + student.getBravery();
+    public void equals (GryffindorStudents student) {
+        int onePower = this.getNobility() + this.getHonor() + this.getBravery();
+        int twoPower = student.getNobility() + student.getHonor() + student.getBravery();
         if (onePower > twoPower) {
             System.out.println(this.getName() + " " + this.getSurname() + " лучший Гриффиндоровец, чем " + student.getName() + " " + student.getSurname());
         } else if (twoPower > onePower) {

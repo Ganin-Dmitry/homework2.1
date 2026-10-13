@@ -1,16 +1,16 @@
-public class Ravenclaw extends Hogwarts {
+public class RavenclawStudents extends HogwartsStudents {
 
     private int mind;
     private int wisdom;
     private int wit;
     private int creation;
 
-    public Ravenclaw (String name, String surname, int value, int transgress, int mind, int wisdom, int wit, int creation) {
+    public RavenclawStudents (String name, String surname, int value, int transgress, int mind, int wisdom, int wit, int creation) {
         super(name, surname, value, transgress);
-        this.mind = mind;
-        this.wisdom = wisdom;
-        this.wit = wit;
-        this.creation = creation;
+        this.setMind(mind);
+        this.setWisdom(wisdom);
+        this.setWit(wit);
+        this.setCreation(creation);
     }
 
     public int getMind () {
@@ -50,9 +50,9 @@ public class Ravenclaw extends Hogwarts {
         return super.toString() + "\nУм: " + this.getMind() + "\nМудрость: " + this.getWisdom() + "\nОстроумие: " + this.getWit() + "\nТворчество: " + this.getCreation();
     }
 
-    public void equals (Ravenclaw student) {
-        int onePower = this.getValue() + this.getTransgress() + this.getMind() + this.getWisdom() + this.getWit() + this.getCreation();
-        int twoPower = student.getValue() + student.getTransgress() + student.getMind() + student.getWisdom() + student.getWit() + this.getCreation();
+    public void equals (RavenclawStudents student) {
+        int onePower = this.getMind() + this.getWisdom() + this.getWit() + this.getCreation();
+        int twoPower = student.getMind() + student.getWisdom() + student.getWit() + this.getCreation();
         if (onePower > twoPower) {
             System.out.println(this.getName() + " " + this.getSurname() + " лучший Когтевранец, чем " + student.getName() + " " + student.getSurname());
         } else if (twoPower > onePower) {

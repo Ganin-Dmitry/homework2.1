@@ -1,11 +1,11 @@
-public class Hogwarts {
+public abstract class HogwartsStudents {
 
     private String name;
     private String surname;
     private int value;
     private int transgress;
 
-    public Hogwarts (String name, String surname, int value, int transgress) {
+    public HogwartsStudents (String name, String surname, int value, int transgress) {
         this.name = name;
         this.surname = surname;
         this.value = value;
@@ -49,7 +49,7 @@ public class Hogwarts {
         return "Имя: " + this.getName() + " " + this.getSurname() + "\nСила магии: " + this.getValue() + "\nРастояние трансгрессии: " + this.getTransgress();
     }
 
-    public void equals (Hogwarts student) {
+    public void equals (HogwartsStudents student) {
         int onePower = this.getValue() + this.getTransgress();
         int twoPower = student.getValue() + student.getTransgress();
         if (onePower > twoPower) {
