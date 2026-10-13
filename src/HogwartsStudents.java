@@ -6,10 +6,10 @@ public abstract class HogwartsStudents {
     private int transgress;
 
     public HogwartsStudents (String name, String surname, int value, int transgress) {
-        this.name = name;
-        this.surname = surname;
-        this.value = value;
-        this.transgress = transgress;
+        this.setName(name);
+        this.setSurname(surname);
+        this.setValue(value);
+        this.setTransgress(transgress);
     }
 
     public String getName () {
